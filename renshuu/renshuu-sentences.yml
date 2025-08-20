@@ -1,0 +1,8 @@
+- keyname: api_key
+  field_type: string
+  name: Renshuu API Key
+  description: Renshuu API Key (read-only), get yours at https://www.renshuu.org/index.php?page=misc/api
+- keyname: schedule_id
+  field_type: number
+  name: Schedule ID
+  description: Renshuu Schedule ID, find in schedule URL
