@@ -1,0 +1,102 @@
+<div class="layout">
+  <div class="grid grid--cols-3">
+    <div class="col col--span-2">
+      <div class="flex flex--col flex--left gap">
+        <span class="title mb--1">Today</span>
+        <div class="row">
+          <div class="item item--emphasis-1">
+            <div class="meta"></div>
+            <div class="content">
+              <span class="title title--small">{{studied.today_all}} Terms</span>
+              <span class="description">Studied Today</span>
+              <div class="flex gap">
+                <span class="label label--small">Vocab: {{studied.today_vocab}}</span>
+                <span class="label label--small">Kanji: {{studied.today_kanji}}</span>
+                <span class="label label--small">Sentences: {{studied.today_sent}}</span>
+              </div>
+            </div>
+          </div>
+          <div class="item item--emphasis-2">
+            <div class="meta"></div>
+            <div class="content">
+              <span class="title title--small">{{streaks.vocab.days_studied_in_a_row}} Day Streak</span>
+              <span class="description">Vocab Only</span>
+              <div class="flex gap--small">
+                <span class="label label--small">All-Time Record: {{streaks.vocab.days_studied_in_a_row_alltime}} days</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <span class="title mt--8 mb--1">Vocab Percentages</span>
+        <div class="grid grid--cols-3">
+          <div class="item item--emphasis-3">
+            <div class="meta"></div>
+            <div class="content">
+              <span class="title title--small">{{ level_progress_percs.vocab.n5 }}%</span>
+              <div class="flex gap--small">
+                <span class="label label--small">N5</span>
+              </div>
+            </div>
+          </div>
+          <div class="item item--emphasis-3">
+            <div class="meta"></div>
+            <div class="content">
+              <span class="title title--small">{{ level_progress_percs.vocab.n4 }}%</span>
+              <div class="flex gap--small">
+                <span class="label label--small">N4</span>
+              </div>
+            </div>
+          </div>
+          <div class="item item--emphasis-3">
+            <div class="meta"></div>
+            <div class="content">
+              <span class="title title--small">{{ level_progress_percs.vocab.n3 }}%</span>
+              <div class="flex gap--small">
+                <span class="label label--small">N3</span>
+              </div>
+            </div>
+          </div>
+          <div class="item item--emphasis-3">
+            <div class="meta"></div>
+            <div class="content">
+              <span class="title title--small">{{ level_progress_percs.vocab.n2 }}%</span>
+              <div class="flex gap--small">
+                <span class="label label--small">N2</span>
+              </div>
+            </div>
+          </div>
+          <div class="item item--emphasis-3">
+            <div class="meta"></div>
+            <div class="content">
+              <span class="title title--small">{{ level_progress_percs.vocab.n1 }}%</span>
+              <div class="flex gap--small">
+                <span class="label label--small">N1</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt--10 row">
+          <div class="item">
+            <div class="content">
+              <div class="flex gap--large">
+                <span class="label label--small">API Calls: {{ api_usage.calls_today }}</span>
+                <span class="label label--small">Joined: {{ user_length }}</span>
+                <span class="label label--small">Level: {{ adventure_level }}</span>
+              </div>  
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col col--center bg--gray-50 rounded">
+      <img class="image-stroke image-dither" src={{kao}} />
+    </div>
+  </div>
+</div>
+
+<div class="title_bar">
+  <img class="image" src="/images/plugins/trmnl--render.svg" />
+  <span class="title">Stats for {{ real_name }}</span>
+  <span class="instance">{{trmnl.plugin_settings.instance_name}}</span>
+</div>
