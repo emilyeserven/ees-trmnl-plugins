@@ -1,0 +1,33 @@
+<div class="layout">
+  <div class="flex-col">
+    <div class="grid grid--cols-2">
+      {% for def in results limit:10 %}
+      <div class="item">
+        <div class="meta"></div>
+        <div class="content">
+          <span class="title title--small">{{def.title}}</span>
+          <span class="description">{{def.summary}}</span>
+          <div class="flex gap--small">
+            <span class="label label--small label--underline">{{def.word_count}} Words</span>
+            <span class="label label--small label--underline">Added {{def.created_at | date: "%b %d, %y"}}</span>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+
+    </div>
+    <div class="flex flex--row flex--center-y flex--left gap--large mt--4">
+      <img width="100px" src="https://raw.githubusercontent.com/emilyeserven/ees-trmnl-plugins/refs/heads/main/reader-qr.png"/>
+      <div class="flex flex--col flex--left">
+      <span class="title title--small">Scan for List:</span>
+      <span class="title title--small">https://read.readwise.io/filter/tag%3Atrmnl%20AND%20in%3Alater</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+<div class="title_bar">
+  <img class="image" src="/images/plugins/trmnl--render.svg" />
+  <span class="title">{{schedules[0].name}}</span>
+  <span class="instance">{{trmnl.plugin_settings.instance_name}}</span>
+</div>
