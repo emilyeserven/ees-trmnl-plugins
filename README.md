@@ -1,1 +1,1 @@
-# ees-trmnl-plugins
+A place for me to put all my [TRMNL](https://usetrmnl.com/) private plugins.
