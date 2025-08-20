@@ -1,0 +1,4 @@
+- keyname: api_key
+  field_type: string
+  name: Renshuu API Key
+  description: Renshuu API Key (read-only), get yours at https://www.renshuu.org/index.php?page=misc/api
