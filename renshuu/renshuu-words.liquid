@@ -1,0 +1,33 @@
+<style>
+  .flex-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+</style>
+{% assign min = 0 %}
+{% assign max = contents.terms | size %}
+{% assign diff = max | minus: min %}
+{% assign randomNumber = trmnl.system.timestamp_utc | date: "%s" | modulo: diff | plus: min %}
+{% assign termToUse = contents.terms[randomNumber] %}
+<div class="layout">
+  <div class="flex-col">
+    <div class="value value--xxlarge mb--2" data-value-fit="true" data-value-fit-max-height="120">{{termToUse.kanji_full}}</div>
+    <div class="value value--large mb--8" data-value-fit="true" data-value-fit-max-height="80">{{termToUse.hiragana_full}}</div>
+    <div class="richtext richtext--left gap--large">
+      <div class="content content--left gap text--left">
+        <ol>
+          {% for def in termToUse.def %}
+          <li>{{def}}</li>
+          {% endfor %}
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="title_bar">
+  <img class="image" src="/images/plugins/trmnl--render.svg" />
+  <span class="title">{{schedules[0].name}}</span>
+  <span class="instance">{{trmnl.plugin_settings.instance_name}}</span>
+</div>
