@@ -1,4 +1,4 @@
-A place for me to put all my [TRMNL](https://usetrmnl.com/) private plugins.
+A place for me to put all my [TRMNL](https://usetrmnl.com/) private plugins. All plugins have an image preview to see what they look like!
 
 ## Plugins
 
